@@ -8,6 +8,7 @@ Certainly there are quite a few good data modeling tools around that can do the 
 Using spreadsheet to define the entitities and attributes are probably not as clumsy as you would think. The benefits are:
 1. Many attributes and data types will reoccur in several tables, there you get the wonderful feature of autocompletion
 2. Sometimes sorting the cells based on a column may come in handy
+3. If you were to type of people who designs data model by hacking out the CREATE TABLE statements, using the spreadsheet frees you mind from thinking about the syntax and formatting and all the technical details. You would be more productiv.
 
 The idea is that you model your data in the spreadsheet and then export as csv file. Load the csv content (for which you can refer to this link: https://github.com/bmlam/plsql_csv_tool ) into an Oracle database table named SPREADSHEET.
 
@@ -44,3 +45,6 @@ COMMENT ON COLUMN d_xf_channels.xf_channel_name IS  'Known values currently: "B
 COMMENT ON COLUMN d_xf_channels.is_self_assisted IS 'FK to D_FLAGS' ;  
 COMMENT ON COLUMN d_xf_channels.insert_load_id IS   'tbd'   ;   
 COMMENT ON COLUMN d_xf_channels.load_id IS  'tbd'   ;   
+
+
+Having come this far, I admit if you just need to modify the data model slightly, it makes sense to modify the DDL statements directly. The spreadsheet approach is great for the first cut, not really for maintaining a data model.
