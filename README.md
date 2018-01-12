@@ -46,5 +46,6 @@ COMMENT ON COLUMN d_xf_channels.is_self_assisted IS 'FK to D_FLAGS' ;  
 COMMENT ON COLUMN d_xf_channels.insert_load_id IS   'tbd'   ;   
 COMMENT ON COLUMN d_xf_channels.load_id IS  'tbd'   ;   
 
-
 Having come this far, I admit if you just need to modify the data model slightly, it makes sense to modify the DDL statements directly. The spreadsheet approach is great for the first cut, not really for maintaining a data model.
+
+I take the view that the database is the true repository of the data model and there should not be a second repository to synchronize with. For this reason maintaining the spreadsheet is not a good idea when you data model has gone into production. For The same reason, I mistrust modeling tools which "claim" to have the monopoly of truth on the data model.  
